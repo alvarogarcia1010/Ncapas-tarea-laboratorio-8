@@ -12,7 +12,15 @@ public interface ClienteDAO {
 	public List<Cliente> findAll() throws DataAccessException;
 	
 	public Cliente findOne(Integer codigo) throws DataAccessException;
-	
+
+	public int insertClientAutoId(Cliente c);
+
+	public void updateCliente(Cliente c);
+
+	public int ejecutarProcedimientoJdbc(Integer client, boolean estado);
+
+	public int[][] batchInsertVehiculos(final List<Vehiculo> vehiculos);
+
 	public void save(Cliente c) throws DataAccessException;
 
 	public List<Cliente> getClientesEstado(Boolean estado);
